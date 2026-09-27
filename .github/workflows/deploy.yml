@@ -1,18 +1,32 @@
+name: Deploy Anime Proxy Hub
 on:
-  workflow_dispatch: # Allows you to manually trigger it anytime
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  mirror-site:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps: deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Your Repository
+      - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          fetch-depth: 0
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
-      - name: Mirror a Git repository
-        uses: actions4git/mirror@master
-        with:
-          # Replace the URL below with the source repository URL provided by your community group
-          src: 'https://github.com'
-          dest: 'github/${{ github.repository }}'
