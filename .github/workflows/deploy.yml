@@ -11,7 +11,7 @@ jobs:
           fetch-depth: 0
 
       - name: Mirror a Git repository
-        uses: actions4git/mirror@v3
+        uses: actions4git/mirror@master
         with:
           # Replace the URL below with the source repository URL provided by your community group
           src: 'https://github.com'
