@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Tech Project Portal</title>
+    <title>Academic Project Hub</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #111; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-        .container { max-width: 600px; padding: 20px; }
-        h1 { font-size: 24px; margin-bottom: 10px; color: #00ffcc; }
-        p { color: #aaa; margin-bottom: 25px; }
-        .player-btn { display: inline-block; background: #00ffcc; color: #000; padding: 12px 24px; font-weight: bold; border-radius: 6px; text-decoration: none; transition: transform 0.2s; }
-        .player-btn:hover { transform: scale(1.05); }
+        body { margin: 0; padding: 40px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0d1117; color: #c9d1d9; text-align: center; }
+        .container { max-width: 700px; margin: 0 auto; background: #161b22; padding: 30px; border-radius: 8px; border: 1px solid #30363d; }
+        h1 { color: #58a6ff; margin-bottom: 10px; font-size: 28px; }
+        p { color: #8b949e; margin-bottom: 30px; font-size: 16px; }
+        .link-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .hub-btn { display: block; background: #21262d; color: #c9d1d9; padding: 15px; border-radius: 6px; border: 1px solid #30363d; font-weight: bold; text-decoration: none; transition: all 0.2s; }
+        .hub-btn:hover { background: #30363d; border-color: #8b949e; color: #58a6ff; }
+        .primary { background: #238636; border-color: #2ea44f; color: #fff; }
+        .primary:hover { background: #2ea44f; color: #fff; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Academic Streaming Hub</h1>
-        <p>This layout operates entirely on whitelisted academic servers, bypassing content filter blocks by routing media straight from source mirrors.</p>
-        <!-- This link opens a completely decentralized public web player repository -->
-       <a class="player-btn" href="https://rawgithack.com" target="_blank">Launch Open-Source Player</a>
+        <h1>Academic Research & Media Hub</h1>
+        <p>This resource directory runs natively on whitelisted GitHub servers, bypassing perimeter firewalls to grant direct access to verified web index directories.</p>
+        
+        <div class="link-grid">
+            <!-- Completely free corporate streaming networks schools leave open -->
+            <a class="hub-btn primary" href="https://tubitv.com" target="_blank">Tubi TV (Free Anime Library)</a>
+            <a class="hub-btn primary" href="https://pluto.tv" target="_blank">Pluto TV (Live Anime Channels)</a>
+            
+            <!-- Open-source entertainment indexing database tools -->
+            <a class="hub-btn" href="https://everythingmoe.com" target="_blank">EverythingMoe Database</a>
+            <a class="hub-btn" href="https://anilist.co" target="_blank">AniList Library Catalog</a>
+            <a class="hub-btn" href="https://myanimelist.net" target="_blank">MyAnimeList Index</a>
+            <a class="hub-btn" href="https://retrocrush.tv" target="_blank">RetroCrush Classic Anime</a>
+        </div>
     </div>
 </body>
 </html>
