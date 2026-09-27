@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch: # Allows you to manually trigger it anytime
+
+jobs:
+  mirror-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Your Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Mirror a Git repository
+        uses: actions4git/mirror@v3
+        with:
+          # Replace the URL below with the source repository URL provided by your community group
+          src: 'https://github.com'
+          dest: 'github/${{ github.repository }}'
